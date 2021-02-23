@@ -25,7 +25,23 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<?php echo "hello" ; ?>
+<?php
+$url = parse_url(getenv("MySQL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$connected = new mysqli($server, $username, $password, $db);
+if ($connected == true) {
+    echo "SQL working" ;
+}
+
+else {
+    echo "not connected" ;
+}
+?>
 </body>
 
 </html>
