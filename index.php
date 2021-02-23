@@ -35,11 +35,16 @@ $db = substr($url["path"], 1);
 
 $connected = new mysqli($server, $username, $password, $db);
 if ($connected == true) {
-    echo "SQL working" ;
+    echo "SQL working <br>" ;
 }
 
 else {
     echo "not connected" ;
+}
+
+$result = mysqli_query($connected, "Select * from heroku_1f36bfdfc189f3e.details");
+while ($row = mysqli_fetch_array($result)){
+    echo $row ["Username"];
 }
 ?>
 </body>
