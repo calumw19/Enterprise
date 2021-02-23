@@ -1,15 +1,4 @@
-{
-  "name": "vendor_name/Enterprise",
-  "description": "description",
-  "minimum-stability": "stable",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "Calum",
-      "email": "email@example.com"
-    }
-  ],
-  "require": {
-    "ext-mysqli": "*"
-  }
+{"require": {
+"monolog/monolog": "1.0.*"
+}
 }
