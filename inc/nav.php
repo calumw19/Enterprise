@@ -53,7 +53,7 @@ if($query_run){
 
 
 
-        <a href="settings.php"><button type="submit" name="logout_btn" class="btn btn-secondary">Sttings</button></a></br>
+        <a href="settings.php"><button type="submit" name="logout_btn" class="btn btn-secondary">Preferences</button></a></br>
         <form action="logout.php" method="POST" style="margin-top:6px;"> 
           
           <button type="submit" name="logout_btn" class="btn btn-danger">Logout</button>
