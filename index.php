@@ -1,14 +1,14 @@
 <?php
 include('inc/head.php'); 
-include('inc/nav.php'); 
-
+include('inc/nav.php');
+require_once('database/dbconfig.php');
 
 
 ?>
 
 <form action="code.php" method="POST">
 <?php 
-
+/*
 require 'database/dbconfig.php';
 $currentUser = $_SESSION["username"];
 $query = "SELECT * FROM user WHERE username='$currentUser' ";
@@ -23,6 +23,12 @@ if($query_run){
             //print_r($row['username']);
             ?>
 <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
+
+ */
+
+
+
+ ?>
 <div class="modal-body">
 
 
@@ -63,24 +69,6 @@ if($query_run){
     <div class="panel-body">A Basic Panel</div>
 </div>
 
-            <?php
-
-
-
-
-        }
-
-    }
-
-}
-
-
-
-?>
-
-
-
- 
 
 </form>
 
