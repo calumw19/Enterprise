@@ -44,14 +44,10 @@ if($query_run){
               <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../../../Users/Calum/Desktop/admin/index.php">Admin Login</a>
+              <a class="nav-link" href="admin/index.php">Admin</a>
             </li>  
           </ul>
           <span class="navbar-text">
-           
-            
-
-
 
         <a href="settings.php"><button type="submit" name="logout_btn" class="btn btn-secondary">Preferences</button></a></br>
         <form action="logout.php" method="POST" style="margin-top:6px;"> 

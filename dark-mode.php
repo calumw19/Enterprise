@@ -1,7 +1,6 @@
 <?php
 include('security.php');
 
-
 include('inc/head.php'); 
 include('inc/nav.php'); 
 ?>
