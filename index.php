@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('inc/head.php'); 
 include('inc/nav.php');
 require_once('database/dbconfig.php');
@@ -7,34 +8,19 @@ require_once('database/dbconfig.php');
 ?>
 
 <form action="code.php" method="POST">
-<?php 
-/*
-require 'database/dbconfig.php';
-$currentUser = $_SESSION["username"];
-$query = "SELECT * FROM user WHERE username='$currentUser' ";
-$query_run = mysqli_query($connection, $query);
-if($query_run){
 
-    if(mysqli_num_rows($query_run)>0){
-
-        while($row = mysqli_fetch_array($query_run)){
-
-
-            //print_r($row['username']);
-            ?>
-<input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
-
- */
+<input type="hidden" name="edit_id" value="<?php echo $_SESSION['id'] ?>">
 
 
 
- ?>
+
+
 <div class="modal-body">
 
 
 
 <div class="container">
-  <div class="row">
+  <div class="row form-group">
     <div class="col-sm">
     <input 
   type="radio" name="edit_food" value="1" 
@@ -46,6 +32,10 @@ if($query_run){
 </label>
     </div>
     <div class="col-sm">
+
+        <input type="hidden" name="edit_id" value="<?php echo $_SESSION["username"] ?>">
+
+
     <input 
   type="radio" name="edit_food" value="2" 
   id="happy" class="input-hidden" />
@@ -75,4 +65,3 @@ if($query_run){
     <?php
 include('inc/footer.php'); 
 ?>
-

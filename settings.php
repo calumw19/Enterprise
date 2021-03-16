@@ -1,6 +1,7 @@
 <?php
 include('inc/head.php'); 
-include('inc/nav.php'); 
+include('inc/nav.php');
+session_start();
 
 ?>
 
@@ -17,22 +18,8 @@ include('inc/nav.php');
   <div class="card-body">
   <form action="code.php" method="POST">
   
-<?php 
 
-require 'database/dbconfig.php';
-$currentUser = $_SESSION["username"];
-$query = "SELECT * FROM user WHERE username='$currentUser' ";
-$query_run = mysqli_query($connection, $query);
-if($query_run){
-
-    if(mysqli_num_rows($query_run)>0){
-
-        while($row = mysqli_fetch_array($query_run)){
-
-
-            //print_r($row['username']);
-            ?>
-            <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
+            <input type="hidden" name="edit_id" value="<?php echo $_SESSION['username'] ?>">
 <div class="modal-body">
 
 
@@ -49,17 +36,6 @@ if($query_run){
     <button type="submit" name="update_dark" class="btn btn-primary" data-dismiss="modal">UPDATE</button>
     <a href="index.php" class="btn btn-danger">CANCEL</a>
 </div>
-            <?php
-
-        }
-
-    }
-
-}
-
-
-
-?>
 
 
 

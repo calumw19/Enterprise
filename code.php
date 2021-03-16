@@ -134,7 +134,7 @@ if(isset($_POST['update_dark']))
 
 
 
-    $query = "UPDATE heroku_1b4d8c3621f1afb.user SET dark='$dark' WHERE id='$id' ";
+    $query = "UPDATE heroku_1b4d8c3621f1afb.user SET dark='$dark' WHERE email='$id' ";
     $query_run = mysqli_query($connection, $query);
 
     if($query_run)
@@ -158,7 +158,7 @@ if(isset($_POST['update_food']))
 
 
 
-    $query = "UPDATE heroku_1b4d8c3621f1afb.user SET food='$food' WHERE id='$id' ";
+    $query = "UPDATE heroku_1b4d8c3621f1afb.user SET food='$food' WHERE email='$id' ";
     $query_run = mysqli_query($connection, $query);
 
     if($query_run)
