@@ -68,4 +68,9 @@ if (isset($_POST['edit_btn'])){
 </div>
 </div>
 
+<?php
+include('includes/scripts.php');
+include('includes/footer.php');
+?>
+
 
