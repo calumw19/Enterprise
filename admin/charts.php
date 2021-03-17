@@ -1,5 +1,5 @@
 <?php
-include('security.php')
+include('security.php');
 include('includes/header.php'); 
 include('includes/navbar.php');
 include('includes/scripts.php');
@@ -31,9 +31,9 @@ include('includes/footer.php');
         $query_run = mysqli_query($connection, $query);
         $sql = "SELECT 'no selection' AS SELECTION ,COUNT(food) AS food FROM `user` WHERE food=0
         UNION ALL
-        SELECT 'meat',COUNT(food) FROM `user` WHERE food=1
+        SELECT 'meat',COUNT(food) FROM heroku_1b4d8c3621f1afb.user WHERE food=1
         UNION ALL
-        SELECT 'vegetables',COUNT(food) FROM `user` WHERE food=2 ";
+        SELECT 'vegetables',COUNT(food) FROM heroku_1b4d8c3621f1afb.user WHERE food=2 ";
         $query_run = mysqli_query($connection, $sql);
         
 
@@ -93,7 +93,7 @@ include('includes/footer.php');
         $query_run = mysqli_query($connection, $query);
         $sql = "SELECT 'white' AS SELECTION ,COUNT(dark) AS dark FROM `user` WHERE dark=0
         UNION ALL
-        SELECT 'black',COUNT(dark) FROM `user` WHERE dark=1";
+        SELECT 'black',COUNT(dark) FROM heroku_1b4d8c3621f1afb.user WHERE dark=1";
 
         $query_run = mysqli_query($connection, $sql);
         
