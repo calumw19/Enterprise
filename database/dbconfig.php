@@ -9,5 +9,5 @@ $db = substr($url["path"], 1);
 $connection = mysqli_connect($server, $username, $password, $db);
 return $connection;
 
-?>
+
 
