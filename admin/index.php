@@ -12,8 +12,20 @@ include('includes/navbar.php');
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">A/B Dashboard</h1>
     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-        class="fas fa-download fa-sm text-white-50"></i> generate Report</a>
-        
+        class="fas fa-download fa-sm text-white-50"></i>
+        <?php
+        require 'database/dbconfig.php';
+        $sql_query = "UPDATE heroku_1b4d8c3621f1afb.user SET food = 0";
+        if(mysqli_query($connection, $sql_query)) {
+            echo "Reset All Users";
+        }
+        else {
+            echo "No Connection";
+        }
+        ?>
+
+    </a>
+
   </div>
 
   <!-- Content Row -->
@@ -87,7 +99,17 @@ include('includes/navbar.php');
               <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
               <div class="row no-gutters align-items-center">
                 <div class="col-auto">
-                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                      <?php
+                      require 'database/dbconfig.php';
+                      $query = "SELECT id FROM heroku_1b4d8c3621f1afb.user ORDER BY id";
+                      $query_run = mysqli_query($connection, $query);
+                      $row = mysqli_num_rows($query_run);
+
+                      echo '<h1>'.$row.'</h1>';
+
+                      ?>
+                  </div>
                 </div>
                 <div class="col">
                   <div class="progress progress-sm mr-2">
