@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include('security.php');
 require 'database/dbconfig.php';
 $currentUser = $_SESSION["username"];
@@ -33,7 +32,7 @@ if($query_run){
 
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="index.php"><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Logo_La_Linea_100x100.png" style="width: 100px; border-radius: 100px;"></a>
+        <a href="index.php"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Food-and-restaurant.svg" style="width: 100px; border-radius: 100px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button> 
