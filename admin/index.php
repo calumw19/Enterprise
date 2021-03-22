@@ -13,17 +13,6 @@ include('includes/navbar.php');
     <h1 class="h3 mb-0 text-gray-800">A/B Dashboard</h1>
     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
         class="fas fa-download fa-sm text-white-50"></i>
-        <?php
-        require 'database/dbconfig.php';
-        $sql_query = "UPDATE heroku_1b4d8c3621f1afb.user SET food = 0";
-        if(mysqli_query($connection, $sql_query)) {
-            echo "Reset All Users";
-        }
-        else {
-            echo "No Connection";
-        }
-        ?>
-
     </a>
 
   </div>
@@ -90,6 +79,7 @@ include('includes/navbar.php');
       </div>
     </div>
 
+
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card border-left-info shadow h-100 py-2">
@@ -136,14 +126,18 @@ include('includes/navbar.php');
               <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
             </div>
-            <div class="col-auto">
-              <i class="fas fa-comments fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+<div class="col-auto">
+    <form class="user" action="code.php" method="POST">
+        <button type="submit" name="reset_btn" class="btn btn-primary btn-user btn-block"> Reset User Meat or Vegetable Selections </button>
+    </form>
+    <i class="fas fa-comments fa-2x text-gray-300"></i>
 
   <!-- Content Row -->
 

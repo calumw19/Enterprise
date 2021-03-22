@@ -17,7 +17,12 @@ require_once('database/dbconfig.php');
 
 <div class="modal-body">
 
-
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Meat or Vegatbles?</h1>
+            <p class="lead">If you could only eat either meat or vegatables for the rest of your life, what would YOU choose?</p>
+        </div>
+    </div>
 
 <div class="container">
   <div class="row form-group">
@@ -47,21 +52,57 @@ require_once('database/dbconfig.php');
     </div>
   </div>
     
-</div>
-<div class="modal-footer" style="justify-content: center;">
-    <button type="submit" name="update_food" class="btn btn-primary btn-lg" data-dismiss="modal">VOTE!</button>
 
-</div>
-
-
-
-<div class="panel panel-default">
-    <div class="panel-body">A Basic Panel</div>
-</div>
+    <div class="card text-center">
+        <div class="card-body">
+            <p class="card-text">Click on either picture, and cast your vote. MEAT OR VEGETABLES?</p>
+            <button type="submit" name="update_food" class="btn btn-primary btn-lg" data-dismiss="modal">VOTE!</button>
+        </div>
+    </div>
 
 
 </form>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Thinking of meat?</h5>
+                    <p class="card-text">Tasty and premium, it would be a no brainer to go with meat, wouldn't it?</p>
+                    <a href="#" class="btn btn-primary">Lets find out</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Fruit_and_vegetable_stand_inside_%E2%80%9CCoyoac%C3%A1n%E2%80%9D_Market.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">What about vegetables?</h5>
+                    <p class="card-text">Healthy. Less Expensive. What other benefits do vegetables have?</p>
+                    <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
     <?php
 include('inc/footer.php'); 
 ?>
+
+

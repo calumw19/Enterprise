@@ -122,6 +122,38 @@ if(isset($_POST['login_btn']))
     
 }
 
+if(isset($_POST['login_btn']))
+{
+    $email_login = $_POST['emaill'];
+    $password_login = $_POST['passwordd'];
+
+    $query = "SELECT * FROM heroku_1b4d8c3621f1afb.register WHERE email='$email_login' AND password='$password_login' LIMIT 1";
+    $query_run = mysqli_query($connection, $query);
+
+    if(mysqli_fetch_array($query_run))
+    {
+        $_SESSION['username'] = $email_login;
+        header('Location: index.php');
+    }
+    else
+    {
+        $_SESSION['status'] = "Email or Password is Invalid";
+        header('Location: login.php');
+    }
+
+
+
+}
+if(isset($_POST['reset_btn'])){
+    require 'database/dbconfig.php';
+    $sql_query = "UPDATE heroku_1b4d8c3621f1afb.user SET food = 0";
+    if (mysqli_query($connection, $sql_query)) {
+        header('Location: index.php');
+    } else {
+        echo "No Connection";
+    }
+
+}
 
 
 

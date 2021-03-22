@@ -6,7 +6,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">Admin Dashboard<sup></sup></div>
+  <div class="sidebar-brand-text mx-3">Return to Main Site<sup></sup></div>
 </a>
 
 <!-- Divider -->
@@ -28,19 +28,15 @@
 <li class="nav-item">
   <a class="nav-link" href="register.php">
     <i class="fas fa-fw fa-cogs"></i>
-    <span>Admin Profile</span></a>
+    <span>Edit Admin Profiles</span></a>
 </li>
 
 
 <li class="nav-item">
   <a class="nav-link" href="charts.php">
     <i class="fas fa-fw fa-chart-area"></i>
-    <span>Charts</span></a>
+    <span>Charts and Results</span></a>
 </li>
-
-
-
-
 
 
 
