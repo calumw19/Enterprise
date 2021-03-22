@@ -17,9 +17,9 @@ require_once('database/dbconfig.php');
 
 <div class="modal-body">
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid jbc">
         <div class="container">
-            <h1 class="display-4">Meat or Vegatbles?</h1>
+            <h1 class="display-4">Meat or Vegetables?</h1>
             <p class="lead">If you could only eat either meat or vegatables for the rest of your life, what would YOU choose?</p>
         </div>
     </div>
@@ -63,7 +63,7 @@ require_once('database/dbconfig.php');
 
 </form>
 
-<div class="container">
+<div class="container" style="padding-top: 69px;">
     <div class="row">
         <div class="col-sm">
             <div class="card" style="width: 18rem;">

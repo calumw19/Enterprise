@@ -1,31 +1,7 @@
 <?php
 include('security.php');
 require 'database/dbconfig.php';
-$currentUser = $_SESSION["username"];
-$query = "SELECT * FROM user WHERE username='$currentUser' ";
-$query_run = mysqli_query($connection, $query);
-if($query_run){
 
-    if(mysqli_num_rows($query_run)>0){
-
-
-        while($row = mysqli_fetch_array($query_run)){
-          if ($row['dark'] == 1){
-
-            echo '<script type="text/javascript">',
-            'document.body.style.backgroundColor = "black";',
-            '</script>';
-          }
-          else{
-
-            echo '<script type="text/javascript">',
-            'document.body.style.backgroundColor = "white";',
-            '</script>';
-
-          }
-
-
-}}}
 
 
 ?>
