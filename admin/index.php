@@ -134,8 +134,7 @@ include('includes/navbar.php');
   </div>
 
 <div class="col-auto">
-    <form class="user" action="code.php" method="POST">
-        <button type="submit" name="reset_btn" class="btn btn-primary btn-user btn-block"> Reset User Meat or Vegetable Selections </button>
+    <form class="user" action="code.php" method="POST"><button type="submit" name="reset_btn" class="btn btn-primary btn-user btn-block"> Reset User Meat or Vegatable Selections </button>
     </form>
     <i class="fas fa-comments fa-2x text-gray-300"></i>
 
