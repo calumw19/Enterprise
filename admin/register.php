@@ -88,7 +88,7 @@ include('includes/navbar.php');
     <div class="table-responsive">
       <?php 
         require 'database/dbconfig.php';
-        $query = "SELECT * FROM heroku_1b4d8c3621f1afb.register";
+        $query = "SELECT * FROM heroku_1b4d8c3621f1afb.user";
         $query_run = mysqli_query($connection, $query);
 
 

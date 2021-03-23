@@ -21,10 +21,6 @@
 
 
 
-
-
-
-
 <li class="nav-item">
   <a class="nav-link" href="register.php">
     <i class="fas fa-fw fa-cogs"></i>
@@ -86,7 +82,6 @@
                <?php echo $_SESSION['username'];?>
                   
                 </span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

@@ -11,9 +11,7 @@ include('includes/navbar.php');
   <!-- Page Heading -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">A/B Dashboard</h1>
-    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-        class="fas fa-download fa-sm text-white-50"></i>
-    </a>
+
 
   </div>
 
@@ -134,7 +132,7 @@ include('includes/navbar.php');
   </div>
 
 <div class="col-auto">
-    <form class="user" action="code.php" method="POST"><button type="submit" name="reset_btn" class="btn btn-primary btn-user btn-block"> Reset User Meat or Vegatable Selections </button>
+    <form class="user" action="code.php" method="POST"><button type="submit" name="reset_btn" class="btn btn-primary btn-user btn-block"style="backgrcolor:lightslategray"> Reset User Meat or Vegatable Selections </button>
     </form>
     <i class="fas fa-comments fa-2x text-gray-300"></i>
 

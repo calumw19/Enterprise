@@ -22,7 +22,7 @@ require 'database/dbconfig.php';
 if (isset($_POST['edit_btn'])){
 
     $id = $_POST["edit_id"];
-    $query = "SELECT * FROM heroku_1b4d8c3621f1afb.register WHERE id='$id' ";
+    $query = "SELECT * FROM heroku_1b4d8c3621f1afb.user WHERE id='$id' ";
     $query_run = mysqli_query($connection, $query);
 
     foreach ($query_run as $row){

@@ -19,8 +19,8 @@ require_once('database/dbconfig.php');
 
     <div class="jumbotron jumbotron-fluid jbc">
         <div class="container">
-            <h1 class="display-4">Meat or Vegetables?</h1>
-            <p class="lead">If you could only eat either meat or vegatables for the rest of your life, what would YOU choose?</p>
+            <h1 class="display-4" style="color:lightslategray">Meat or Vegetables?</h1>
+            <p class="lead"style="color:lightslategrey">If you could only eat either meat or vegetables for the rest of your life, what would YOU choose?</p>
         </div>
     </div>
 

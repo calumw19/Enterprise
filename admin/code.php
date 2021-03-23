@@ -59,7 +59,7 @@ if(isset($_POST['updatebtn']))
     $email = $_POST['edit_email'];
     $password = $_POST['edit_password'];
 
-    $query = "UPDATE heroku_1b4d8c3621f1afb.register SET username='$username', email='$email', password='$password' WHERE id='$id' ";
+    $query = "UPDATE heroku_1b4d8c3621f1afb.user SET username='$username', email='$email', password='$password' WHERE id='$id' ";
     $query_run = mysqli_query($connection, $query);
 
     if($query_run)
