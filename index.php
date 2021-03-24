@@ -1,11 +1,18 @@
 <?php
 session_start();
-include('inc/head.php'); 
-include('inc/nav.php');
 require_once('database/dbconfig.php');
 
 
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <?php include('inc/head.php'); ?>
+</head>
+<body>
+<?php include('inc/nav.php');?>
+
 
 <form action="code.php" method="POST">
 
@@ -80,9 +87,7 @@ require_once('database/dbconfig.php');
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <a href="map.php"?>Search for places to eat</a>
                 </div>
             </div>
         </div>
@@ -97,12 +102,15 @@ require_once('database/dbconfig.php');
             </div>
         </div>
     </div>
+
 </div>
 
+<?php  include('inc/footer.php'); ?>
+</body>
+
+</html>
 
 
-    <?php
-include('inc/footer.php'); 
-?>
+
 
 
