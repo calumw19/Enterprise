@@ -85,8 +85,8 @@ require_once('database/dbconfig.php');
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <h5 class="card-title">Feeling hungry?</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Cast your vote and then click on the link below!</h6>
                     <a href="map.php"?>Search for places to eat</a>
                 </div>
             </div>

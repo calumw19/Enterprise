@@ -80,7 +80,7 @@ if(isset($_POST['updatebtn']))
 if(isset($_POST['delete_btn'])){
 
     $id = $_POST['delete_id'];
-    $query = "DELETE FROM heroku_1b4d8c3621f1afb.register WHERE id='$id' ";
+    $query = "DELETE FROM heroku_1b4d8c3621f1afb.user WHERE id='$id' ";
     $query_run = mysqli_query($connection, $query);
 
     if ($query_run){
