@@ -21,8 +21,9 @@ include('includes/header.php');
             <div class="p-5">
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Login Here!</h1>
-                <?php
 
+                <?php
+                    //if login status has been set, show alert message (user profile created/ User profile not added)
                     if(isset($_SESSION['status']) && $_SESSION['status'] !='') 
                     {
                         echo '<h2 class="bg-danger text-white"> '.$_SESSION['status'].' </h2>';

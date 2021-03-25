@@ -3,13 +3,15 @@ include('security.php');
 require('database/dbconfig.php');
 
 
-// getting the users entered information from register form
+// checking if form is filled in for the registration page
 if(isset($_POST['registerbtn'],$_POST['username'],$_POST['email'],$_POST['password'],$_POST['confirmpassword']))
 {
+    //store details into variables
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $cpassword = $_POST['confirmpassword'];
+
     //checking if email already exists
     $email_query = "SELECT * FROM heroku_1b4d8c3621f1afb.user WHERE email='$email' ";
     $email_query_run = mysqli_query($connection, $email_query);

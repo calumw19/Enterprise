@@ -38,18 +38,22 @@ window.addEventListener('load', (event) => {
 
 include('database/dbconfig.php');
 
+
+//once register button is clicked
 if(isset($_POST['registerbtn']))
 {
+    //stores details as variables
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirmpassword'];
 
+    //checks if passwords are the same
     if($password === $confirm_password)
     {
         $query = "INSERT INTO register (username,email,password) VALUES ('$username','$email','$password')";
         $query_run = mysqli_query($connection, $query);
-    
+
         if($query_run)
         {
             echo "done";

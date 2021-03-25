@@ -3,14 +3,17 @@ session_start();
 require_once('database/dbconfig.php');
 $email = $_SESSION["username"];
 
+//getting the current users details from the database using the set session
 $query = "SELECT * FROM heroku_1b4d8c3621f1afb.user WHERE email='$email' LIMIT 1";
 $query_run = mysqli_query($connection, $query);
 
-
+//checks if result is returned
 if($query_run)
 {
+    //return the row as an array from query
     while($row = mysqli_fetch_array($query_run))
     {
+        //if food preference has been chosen, place markers on the map dependent on choice, otherwise skip.
         if($row["food"] != 0)
         {
             $veggie = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=Vegetarian%20Restaurant&sensor=true&location=57.145438,-2.102758&radius=5500&key=AIzaSyD3RSD0_HDapb0f3e6rm7gy4VuhMa5Nud8";
@@ -23,16 +26,19 @@ if($query_run)
     }
 }
 
+//array to store details of each restaurant
 $restaurants = array();
 
+//loop through each object from json returned from google places API
 foreach($obj->results as $key => $restaurant)
 {
+    //Get the name, lat/long and the location
     $name = $restaurant->name;
     $latlong = ["lat"=>$restaurant->geometry->location->lat,
                 "long"=>$restaurant->geometry->location->lng];
     $address = $restaurant->formatted_address;
 
-
+    //create new array to hold the details to create multi demisional array
     $details = array("name"=>$name, "latlong"=>$latlong, "address"=>$address);
     array_push($restaurants, $details);
 }

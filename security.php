@@ -1,6 +1,8 @@
 <?php
 session_start();
 include('database/dbconfig.php');
+
+//checks if connection has been made
 if($connection)
 {
     // echo "Database Connected";
