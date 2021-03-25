@@ -3,14 +3,14 @@ include('security.php');
 require('database/dbconfig.php');
 
 
-
+// getting the users entered information from register form
 if(isset($_POST['registerbtn'],$_POST['username'],$_POST['email'],$_POST['password'],$_POST['confirmpassword']))
 {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $cpassword = $_POST['confirmpassword'];
-
+    //checking if email already exists
     $email_query = "SELECT * FROM heroku_1b4d8c3621f1afb.user WHERE email='$email' ";
     $email_query_run = mysqli_query($connection, $email_query);
     if(mysqli_num_rows($email_query_run) > 0)
@@ -19,7 +19,7 @@ if(isset($_POST['registerbtn'],$_POST['username'],$_POST['email'],$_POST['passwo
         $_SESSION['status_code'] = "error";
         header('Location: register.php');
     }
-    else
+    else  // checks if both passwords entered by the user match
     {
         if($password === $cpassword)
         {
@@ -34,7 +34,7 @@ if(isset($_POST['registerbtn'],$_POST['username'],$_POST['email'],$_POST['passwo
                 $_SESSION['status_code'] = "success";
                 header('Location: register.php');
             }
-            else
+            else // if unsuccessful echo on page
             {
                 $_SESSION['status'] = "User Profile Not Added";
                 $_SESSION['status_code'] = "error";
@@ -54,7 +54,7 @@ if(isset($_POST['registerbtn'],$_POST['username'],$_POST['email'],$_POST['passwo
 } else {echo "error";}
 
 
-
+// update btn logic to replace database information with new user entered information
 
 include('security.php');
 
@@ -67,14 +67,14 @@ if(isset($_POST['updatebtn']))
 
     $query = "UPDATE heroku_1b4d8c3621f1afb.user SET username='$username', email='$email', password='$password' WHERE id='$id' ";
     $query_run = mysqli_query($connection, $query);
-
+    // success message printed
     if($query_run)
     {
         $_SESSION['status'] = "Your Data is Updated";
         $_SESSION['status_code'] = "success";
         header('Location: register.php');
     }
-    else
+    else // error message printed if unsuccessful
     {
         $_SESSION['status'] = "Your Data is NOT Updated";
         $_SESSION['status_code'] = "error";
@@ -82,7 +82,7 @@ if(isset($_POST['updatebtn']))
     }
 }
 
-
+// Delete button to delete the selected user from the database
 if(isset($_POST['delete_btn'])){
 
     $id = $_POST['delete_id'];
@@ -90,7 +90,7 @@ if(isset($_POST['delete_btn'])){
     $query_run = mysqli_query($connection, $query);
 
     if ($query_run){
-
+        // success message printed
         $_SESSION['success'] = "Your Data is DELETED";
         header('Location: register.php');
 
@@ -106,7 +106,8 @@ if(isset($_POST['delete_btn'])){
 
 
 include('security.php');
-
+//login button checks the user entered details and looks for a match in the user database, if match
+// is found, the user is taken to the homepage. Else, the user has to try again.
 if(isset($_POST['login_btn']))
 {
     $email_login = $_POST['emaill'];
@@ -128,23 +129,23 @@ if(isset($_POST['login_btn']))
 
 }
 
+// when the user selects dark mode, the database updates the users choice and stores it inside the db
 
 if(isset($_POST['update_dark']))
 {
     $id = $_POST['edit_id'];
     $dark = $_POST['edit_dark'];
 
-
-
     $query = "UPDATE heroku_1b4d8c3621f1afb.user SET dark='$dark' WHERE email='$id' ";
     $query_run = mysqli_query($connection, $query);
-
+    // success echo
     if($query_run)
     {
         $_SESSION['status'] = "Your Data is Updated";
         $_SESSION['status_code'] = "success";
         header('Location: index.php');
     }
+    //failure message
     else
     {
         $_SESSION['status'] = "Your Data is NOT Updated";
@@ -152,23 +153,22 @@ if(isset($_POST['update_dark']))
         header('Location: index.php');
     }
 }
-
+// when the user casts their vote, the database updates the users choice and stores it inside the db/
 if(isset($_POST['update_food']))
 {
     $id = $_POST['edit_id'];
     $food = $_POST['edit_food'];
 
-
-
     $query = "UPDATE heroku_1b4d8c3621f1afb.user SET food='$food' WHERE email='$id' ";
     $query_run = mysqli_query($connection, $query);
-
+    // echo success
     if($query_run)
     {
         $_SESSION['status'] = "Your Data is Updated";
         $_SESSION['status_code'] = "success";
         header('Location: index.php');
     }
+    //echo failure
     else
     {
         $_SESSION['status'] = "Your Data is NOT Updated";

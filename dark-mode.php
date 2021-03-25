@@ -66,11 +66,6 @@ include('inc/nav.php');
 
 
 
-
-
-
-
-
     <div class="table-responsive">
       <?php 
         require 'database/dbconfig.php';

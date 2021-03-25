@@ -6,8 +6,6 @@ include('includes/navbar.php');
 ?>
 
 
-
-
 <div class="container-fluid">
    <div class="card shadow mb-4">
       <div class="card-header py-3">
@@ -15,8 +13,6 @@ include('includes/navbar.php');
          </h6>
       </div>
       <div class="card-body">
-
-
 
 
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -34,8 +30,6 @@ include('includes/navbar.php');
         UNION ALL
         SELECT 'vegetables',COUNT(food) FROM heroku_1b4d8c3621f1afb.user WHERE food=2 ";
         $query_run = mysqli_query($connection, $sql);
-        
-
 
 
       if(mysqli_num_rows($query_run)>0){
@@ -50,7 +44,6 @@ include('includes/navbar.php');
       }
         
         ?>
-
 
 
       function drawChart() {
@@ -85,7 +78,6 @@ include('includes/navbar.php');
     <hr>
 
 
-
     <?php 
         require 'database/dbconfig.php';
         $query = "SELECT * FROM user ";
@@ -114,9 +106,6 @@ include('includes/navbar.php');
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
-
-
-
 
 
 
