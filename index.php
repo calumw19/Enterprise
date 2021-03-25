@@ -1,10 +1,8 @@
 <?php
 session_start();
 require_once('database/dbconfig.php');
-
-
 ?>
-
+<!-- setting doc type and adding navigation and header to page -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,14 +11,13 @@ require_once('database/dbconfig.php');
 <body>
 <?php include('inc/nav.php');?>
 
+<!-- getting session ID of the current user -->
 
 <form action="code.php" method="POST">
 
 <input type="hidden" name="edit_id" value="<?php echo $_SESSION['id'] ?>">
 
-
-
-
+    <!-- Jumbatron to hold pages main title and a breif description of the A/B test -->
 
 <div class="modal-body">
 
@@ -30,6 +27,8 @@ require_once('database/dbconfig.php');
             <p class="lead"style="color:lightslategrey">If you could only eat either meat or vegetables for the rest of your life, what would YOU choose?</p>
         </div>
     </div>
+
+    <!-- Images placed and a value is assigned to each image -->
 
 <div class="container">
   <div class="row form-group">
@@ -47,6 +46,7 @@ require_once('database/dbconfig.php');
 
         <input type="hidden" name="edit_id" value="<?php echo $_SESSION["username"] ?>">
 
+        <!-- Images placed and a value is assigned to each image -->
 
     <input 
   type="radio" name="edit_food" value="2" 
@@ -58,7 +58,8 @@ require_once('database/dbconfig.php');
 </label>
     </div>
   </div>
-    
+
+    <!-- Vote button placed -->
 
     <div class="card text-center">
         <div class="card-body">
@@ -69,6 +70,10 @@ require_once('database/dbconfig.php');
 
 
 </form>
+<!-- 3 cards placed -->
+<!-- Card 1 has picture of meat, with a link to meat page -->
+<!-- Card 2 has link to a map to show local steakhouses or vegetarian cafes based on users selection -->
+<!-- Card 3 has picture of vegetables and link to vegetarian page -->
 
 <div class="container" style="padding-top: 69px;">
     <div class="row">
@@ -102,6 +107,7 @@ require_once('database/dbconfig.php');
             </div>
         </div>
     </div>
+    <!-- adding the footer to the bottom of the page -->
 
 </div>
 

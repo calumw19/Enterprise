@@ -2,6 +2,8 @@
 include('security.php');
 require('database/dbconfig.php');
 
+
+
 if(isset($_POST['registerbtn'],$_POST['username'],$_POST['email'],$_POST['password'],$_POST['confirmpassword']))
 {
     $username = $_POST['username'];

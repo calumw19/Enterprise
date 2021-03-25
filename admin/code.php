@@ -154,6 +154,16 @@ if(isset($_POST['reset_btn'])){
     }
 
 }
+if(isset($_POST['reset2_btn'])){
+    require 'database/dbconfig.php';
+    $sql_query = "UPDATE heroku_1b4d8c3621f1afb.user SET dark = 0";
+    if (mysqli_query($connection, $sql_query)) {
+        header('Location: index.php');
+    } else {
+        echo "No Connection";
+    }
+
+}
 
 
 

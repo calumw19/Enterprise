@@ -52,7 +52,7 @@ include('includes/navbar.php');
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">  
-    <h6 class="m-0 font-weight-bold text-primary">Admin Profile 
+    <h6 class="m-0 font-weight-bold text-primary">
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
         Add Admin Profile
     </h6>
@@ -81,10 +81,6 @@ include('includes/navbar.php');
 
 
 
-
-
-
-
     <div class="table-responsive">
       <?php 
         require 'database/dbconfig.php';
@@ -98,7 +94,6 @@ include('includes/navbar.php');
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-            <th> ID </th>
             <th> Username </th>
             <th>Email </th>
             <th>Password</th>
@@ -114,8 +109,6 @@ include('includes/navbar.php');
         while($row = mysqli_fetch_assoc($query_run)){
           ?>
               <tr>
-          
-            <td><?php echo $row["id"]; ?></td>
             <td><?php echo $row["username"]; ?></td>
             <td><?php echo $row["email"] ?></td>
             <td><?php echo $row["password"]; ?></td>
