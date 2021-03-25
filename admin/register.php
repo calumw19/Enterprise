@@ -102,8 +102,8 @@ include('includes/navbar.php');
             <th> Username </th>
             <th>Email </th>
             <th>Password</th>
-            <th>EDIT </th>
-            <th>DELETE </th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
