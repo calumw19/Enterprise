@@ -3,9 +3,6 @@ session_start();
 include('inc/head.php'); 
 ?>
 
-
-
-
 <div class="container">
 <!-- Outer Row -->
 <div class="row justify-content-center">
@@ -18,6 +15,8 @@ include('inc/head.php');
           <div class="col-lg-12">
             <div class="p-5">
               <div class="text-center">
+
+                  <!-- cchecking user status and will inform of any errors / success -->
                 <h1 class="h4 text-gray-900 mb-4">User login!</h1>
                 <?php
 
@@ -29,6 +28,7 @@ include('inc/head.php');
                 ?>
               </div>
 
+                <!-- Form to collect users login details -->
                 <form class="user" action="code.php" method="POST">
 
                     <div class="form-group">
@@ -53,9 +53,6 @@ include('inc/head.php');
   </div>
 
 </div>
-
-
-
 
 <?php
 include('inc/scripts.php'); 

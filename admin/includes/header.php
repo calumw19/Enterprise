@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- This will be displayed on every page that it is called, it will be called at the top of the page -->
 <head>
 
   <meta charset="utf-8">

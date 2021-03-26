@@ -1,3 +1,4 @@
+<!-- Nav bar for admin that allows users to move between different admin sections -->
    <!-- Sidebar -->
    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 

@@ -11,6 +11,7 @@
   </head>
   <body>
 
+  <!-- Register form to allow user to enter their details and store them -->
 <h1 style="text-align:center; margin-top:30px;">REGISTER</h1>
       <form action="code.php" method="POST" style="width:60%; margin:auto;">
 

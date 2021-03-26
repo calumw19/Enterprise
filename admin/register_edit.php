@@ -15,10 +15,11 @@ include('includes/navbar.php');
 
   <div class="card-body">
 
+
 <?php 
 
 require 'database/dbconfig.php';
-
+//apply changes to the database
 if (isset($_POST['edit_btn'])){
 
     $id = $_POST["edit_id"];
@@ -29,7 +30,7 @@ if (isset($_POST['edit_btn'])){
 
         ?>
 
-
+<!-- creates a from to allow users to make changes, and fills the form in with details from the database -->
   <form action="code.php" method="POST">
 <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
 <div class="modal-body">

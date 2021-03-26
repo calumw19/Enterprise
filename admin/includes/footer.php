@@ -1,5 +1,6 @@
 
 
+<!-- This will be displayed on every page that it is called, it will be called at the bottom of the page -->
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">

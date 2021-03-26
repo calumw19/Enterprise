@@ -4,12 +4,12 @@ include('includes/header.php');
 include('includes/navbar.php');
 ?>
 
-
+<!--user profiles are displayed in a table -->
 <div class="modal fade" id="addadminprofile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Admin Data</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add User Data</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -54,14 +54,14 @@ include('includes/navbar.php');
   <div class="card-header py-3">  
     <h6 class="m-0 font-weight-bold text-primary">
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
-        Add Admin Profile
+        Add User Profile
     </h6>
   </div>
 
   <div class="card-body">
 
     <?php
-
+      //notify user of success or error
       if(isset($_SESSION['success']) && $_SESSION['success'] !='' ){
 
         echo '<h2 class="bg-primary text-white">'.$_SESSION['success'].'</h2>';
@@ -82,7 +82,8 @@ include('includes/navbar.php');
 
 
     <div class="table-responsive">
-      <?php 
+      <?php
+      // getting all user data from db
         require 'database/dbconfig.php';
         $query = "SELECT * FROM heroku_1b4d8c3621f1afb.user";
         $query_run = mysqli_query($connection, $query);
@@ -90,7 +91,7 @@ include('includes/navbar.php');
 
 
       ?>
-
+       <!-- create table to contain user details -->
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
@@ -103,7 +104,7 @@ include('includes/navbar.php');
         </thead>
         <tbody>
      <?php 
-     
+       //if rows returned are more than one place data into table
       if(mysqli_num_rows($query_run) > 0){
 
         while($row = mysqli_fetch_assoc($query_run)){
@@ -113,7 +114,7 @@ include('includes/navbar.php');
             <td><?php echo $row["email"] ?></td>
             <td><?php echo $row["password"]; ?></td>
             <td>
-        
+                <!--icons for remove and edit are added-->
                 <form action="register_edit.php" method="post">
                     <input type="hidden" name="edit_id" value="<?php echo $row["id"]; ?>">
                     <button  type="submit" name="edit_btn" class="btn btn-success"> <img src="img/edit.png" style="width: 20px;"></button>

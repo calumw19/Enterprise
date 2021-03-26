@@ -78,7 +78,7 @@ if(isset($_POST['registerbtn']))
 
 
 
-
+// get t
 
   $currentUser = $_SESSION["username"];
   $query = "SELECT * FROM user WHERE username='$currentUser' ";
